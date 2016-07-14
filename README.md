@@ -11,7 +11,7 @@ $ npm install --save insert2
 ## Usage
 
 ```js
-const insert2 = require('insert2')
+import insert from 'insert2'
 
 const html = `
 <html>
@@ -23,8 +23,7 @@ const html = `
 </html> 
 `
 
-insert2({
-  html,
+insert(html, {
   string: '<link rel="stylesheet" href="style.css" />',
   el: 'head'
 })
@@ -42,7 +41,7 @@ insert2({
 
 ## API
 
-### insert2(options)
+### insert2(html, options)
 
 #### html
 
@@ -51,26 +50,36 @@ Default: `''`
 
 The original HTML string.
 
-#### string
+#### options
+
+##### string
 
 Type: `String`<br>
 Default: `''`
 
 The string to be inserted into HTML.
 
-#### el
+##### el
 
 Type: `String`<br>
 Default: `body`
 
 HTML tag name, the place to insert into.
 
-#### type:
+##### type:
 
 Type: `String`<br>
 Default: `append`
 
 `append` or `prepend`.
+
+### insertMulti(html, options: Array&lt;object&gt;)
+
+Like insert2() but uses a list of options to do multiple insertions.
+
+```js
+import {insertMulti} from 'insert2'
+```
 
 ## License
 

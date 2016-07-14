@@ -1,5 +1,4 @@
-export default function insert({
-  html = '',
+export default function insert(html = '', {
   string = '',
   el = 'body',
   type = 'append'
@@ -18,3 +17,12 @@ export default function insert({
     `$&${string}`
   )
 }
+
+export function inserMulti(html = '', arr = []) {
+  let result = html
+  for (const option of arr) {
+    result = insert(result, option)
+  }
+  return result
+}
+

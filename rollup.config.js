@@ -11,5 +11,6 @@ export default {
     })
   ],
   format: 'umd',
-  moduleName: 'insert2'
+  moduleName: 'insert2',
+  exports: 'named'
 }
