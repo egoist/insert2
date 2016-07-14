@@ -18,7 +18,7 @@ export default function insert(html = '', {
   )
 }
 
-export function inserMulti(html = '', arr = []) {
+export function insertMulti(html = '', arr = []) {
   let result = html
   for (const option of arr) {
     result = insert(result, option)

@@ -1,5 +1,5 @@
 import test from 'ava'
-import insert2 from './index.es6'
+import insert2, {insertMulti} from './index.es6'
 
 test('append', t => {
   const html = insert2('<body class="hi">hello world</body></html>', {
@@ -25,7 +25,7 @@ test('other tag', t => {
 })
 
 test('insert multi', t => {
-  const html = insert2.multi('<head><style></style></head><body></body></html>', [
+  const html = insertMulti('<head><style></style></head><body></body></html>', [
     {
       string: 'xxx',
       el: 'head'
