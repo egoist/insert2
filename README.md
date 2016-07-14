@@ -66,7 +66,7 @@ Default: `body`
 
 HTML tag name, the place to insert into.
 
-##### type:
+##### type
 
 Type: `String`<br>
 Default: `append`
