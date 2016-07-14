@@ -1,0 +1,43 @@
+{
+  "name": "insert2",
+  "version": "0.0.0",
+  "description": "Insert string into HTML.",
+  "license": "MIT",
+  "repository": "egoist/insert2",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "scripts": {
+    "test": "xo index.es6.js && ava",
+    "build": "rollup -c"
+  },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "insert",
+    "dom",
+    "html"
+  ],
+  "devDependencies": {
+    "ava": "latest",
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "babel-preset-stage-1": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "rollup": "^0.34.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "xo": "latest"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  }
+}
